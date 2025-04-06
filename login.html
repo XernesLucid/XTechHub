@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      .login-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 320px;
+        text-align: center;
+      }
+      .login-container h2 {
+        margin-bottom: 20px;
+      }
+      .login-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .login-container input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .login-container button {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+      }
+      .login-container .social-login {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Increased gap to ensure buttons are not overlapping */
+      }
+      .g_id_signin {
+        display: flex;
+        justify-content: center;
+      }
+      .email-login-btn {
+        background-color: orangered;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .facebook-btn {
+        background-color: #3b5998;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px; /* Match height of other buttons */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form action="https://XTechHub.me/login" method="POST">
+        <input type="text" name="username" placeholder="Username" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+      <div class="social-login">
+        <!-- Facebook Login Button -->
+        <div class="facebook-btn">
+          <fb:login-button
+            scope="public_profile,email"
+            onlogin="checkLoginState();"
+          >
+          </fb:login-button>
+        </div>
+
+        <div id="status"></div>
+
+        <!-- Email Login Button -->
+        <div class="email-login-btn" onclick="loginWithEmail()">
+          Login with Email
+        </div>
+
+        <!-- Load the Facebook SDK -->
+        <script>
+          window.fbAsyncInit = function () {
+            FB.init({
+              appId: "YOUR_FACEBOOK_APP_ID", // Replace with your App ID for XTechHub.me
+              cookie: true,
+              xfbml: true,
+              version: "v19.0", // Or latest version
+            });
+
+            FB.AppEvents.logPageView();
+          };
+
+          (function (d, s, id) {
+            var js,
+              fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          })(document, "script", "facebook-jssdk");
+
+          function checkLoginState() {
+            FB.getLoginStatus(function (response) {
+              statusChangeCallback(response);
+            });
+          }
+
+          function statusChangeCallback(response) {
+            if (response.status === "connected") {
+              FB.api("/me", function (user) {
+                document.getElementById("status").innerHTML =
+                  "Hello, " + user.name + "!";
+              });
+            } else {
+              document.getElementById("status").innerHTML = "Please log in.";
+            }
+          }
+
+          // Email login function
+          function loginWithEmail() {
+            const email = prompt("Enter your email:");
+            if (email) {
+              alert("Login link sent to " + email);
+              // Add your email login API call here
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

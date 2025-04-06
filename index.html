@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XTechHub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Add spacing between main content and footer */
+      .main-content {
+        padding: 20px;
+        background-color: #f9f9f9; /* Light background for content */
+        margin-bottom: 400px; /* Add spacing below main content */
+      }
+      /* Ensure footer stays below main content */
+      footer {
+        clear: both;
+        position: relative;
+        z-index: 1;
+      }
+      .centered-container {
+        display: flex;
+        justify-content: center; /* Center align the content */
+        gap: 0px; /* Add spacing between sections */
+      }
+
+      .nav-container,
+      .aside-section {
+        display: flex;
+        align-items: center; /* Align content vertically */
+      }
+
+      .nav-container {
+        align-items: flex-start; /* Align navigation menu to the top */
+      }
+
+      .slideshow-container img {
+        display: block;
+        max-height: 400px; /* Set a consistent height for slideshow images */
+        object-fit: cover;
+      }
+
+      .nav-container ul,
+      .aside-section .aside-item {
+        height: 90px; /* Match height with slideshow images */
+      }
+
+      .nav-container ul {
+        list-style: none; /* Remove default bullet points */
+        padding-left: 20px; /* Remove padding for custom layout */
+      }
+
+      .nav-container li {
+        display: flex;
+        justify-content: space-between; /* Space between text and arrow */
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .nav-container li .arrow {
+        font-size: 12px; /* Adjust arrow size */
+        color: #888; /* Arrow color */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-top" style="color: black">
+        <div class="header-top-item">Liên hệ: 0111-XXXX</div>
+        <div class="header-top-item">Chuyển phát nhanh</div>
+        <div class="header-top-item">Chính hãng - Chất lượng</div>
+      </div>
+      <div class="header-main">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo" />
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Bạn cần gì?" />
+        </div>
+        <div class="user-actions">
+          <a href="track-order.html" class="link">Tra cứu</a>
+          <a href="cart.html" class="link">Giỏ hàng</a>
+          <a href="login.html" class="link">Đăng nhập</a>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content Layout -->
+    <main class="main-content">
+      <div class="content-row">
+        <div class="centered-container">
+          <!-- Navigation Menu -->
+          <div class="nav-container">
+            <nav class="main-nav">
+              <ul>
+                <li>
+                  Điện thoại, Tablet
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Laptop
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Âm thanh, Mic thu âm
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Đồng hồ, Camera
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Đồ gia dụng
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Phụ kiện
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  PC, Màn hình, Máy in
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Tivi
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Thu cũ đổi mới
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Hàng cũ
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Khuyến mãi
+                  <span class="arrow">&#8250;</span>
+                </li>
+                <li>
+                  Tin công nghệ
+                  <span class="arrow">&#8250;</span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Slideshow Section -->
+          <section class="slideshow-container">
+            <div class="slideshow" style="margin-left: 0">
+              <div class="slideshow-inner">
+                <div class="slide">
+                  <img src="img/slideshow1.png" alt="Slide 1" />
+                </div>
+                <div class="slide">
+                  <img src="img/slideshow2.png" alt="Slide 2" />
+                </div>
+                <div class="slide">
+                  <img src="img/slide show 3.png" alt="Slide 3" />
+                </div>
+                <div class="slide">
+                  <img src="img/slideshow4.png" alt="Slide 4" />
+                </div>
+                <div class="slide">
+                  <img src="img/slideshow5.png" alt="Slide 5" />
+                </div>
+              </div>
+              <div class="slideshow-controls">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+              </div>
+              <div class="dots-container">
+                <!-- Navigation dots will be dynamically added here -->
+              </div>
+            </div>
+          </section>
+          <!-- Aside Section -->
+          <aside class="aside-section">
+            <div class="aside-item">
+              <img src="img/aside1.png" alt="Aside 1" />
+            </div>
+            <div class="aside-item">
+              <img src="img/aside2.png" alt="Aside 2" />
+            </div>
+            <div class="aside-item">
+              <img src="img/aside3.png" alt="Aside 3" />
+            </div>
+          </aside>
+        </div>
+      </div>
+      <h2>Sản phẩm nổi bật</h2>
+      <section class="product-list">
+        <section class="product-list">
+          <h2>Điện thoại nổi bật</h2>
+          <div class="product-grid">
+            <div class="product-item">
+              <img src="img/phone1.png" alt="Phone 1" />
+              <div class="product-info"></div>
+            </div>
+            <div class="product-item">
+              <img src="img/phone2.png" alt="Phone 2" />
+              <div class="product-info"></div>
+            </div>
+            <div class="product-item">
+              <img src="img/phone3.png" alt="Phone 3" />
+              <div class="product-info"></div>
+            </div>
+            <div class="product-item">
+              <img src="img/phone4.png" alt="Phone 4" />
+              <div class="product-info"></div>
+            </div>
+            <div class="product-item">
+              <img src="img/phone5.png" alt="Phone 5" />
+              <div class="product-info"></div>
+            </div>
+          </div>
+        </section>
+        <br /><br /><br /><br />
+        <h2>Tai nghe</h2>
+        <div class="product-grid">
+          <!-- Adjusted product grid layout -->
+          <div class="product-item">
+            <img src="img/taing1.png" alt="AirPods 4" />
+            <div class="product-info"></div>
+          </div>
+          <div class="product-item">
+            <img src="img/taing2.png" alt="Galaxy Buds2 Pro" />
+            <div class="product-info"></div>
+          </div>
+          <div class="product-item">
+            <img src="img/taing3.png" alt="Galaxy Buds2 Pro" />
+            <div class="product-info"></div>
+          </div>
+          <div class="product-item">
+            <img src="img/taing4.png" alt="Galaxy Buds2 Pro" />
+            <div class="product-info"></div>
+          </div>
+          <div class="product-item">
+            <img src="img/taing5.png" alt="Galaxy Buds2 Pro" />
+            <div class="product-info"></div>
+          </div>
+
+          <div class="product-item">
+            <img src="img/taing6.png" alt="Galaxy Buds2 Pro" />
+            <div class="product-info"></div>
+          </div>
+          <div class="product-item">
+            <img src="img/taing7.png" alt="Galaxy Buds2 Pro" />
+            <div class="product-info"></div>
+          </div>
+          <div class="product-item">
+            <img src="img/taing8.png" alt="Galaxy Buds2 Pro" />
+            <div class="product-info"></div>
+          </div>
+          <div class="product-item">
+            <img src="img/taing9.png" alt="Galaxy Buds2 Pro" />
+            <div class="product-info"></div>
+          </div>
+          <div class="product-item">
+            <img src="img/taing10.png" alt="Galaxy Buds2 Pro" />
+            <div class="product-info"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-left">
+        <p>XTechHub</p>
+        <p>Trung tâm đổi mới, điều phối công nghệ để hỗ trợ cộng đồng</p>
+      </div>
+      <div class="footer-center">
+        <p>FAQ</p>
+        <p><a href="mailto:support@xtechhub.com">support@xtechhub.com</a></p>
+        <p>XTechHub © 2017. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <p>Liên hệ: 0111-XXXX</p>
+        <div class="social-icons">
+          <a href="#"><img src="img/x-icon.png" alt="X" /></a>
+          <a href="#"><img src="img/instagram-icon.png" alt="Instagram" /></a>
+        </div>
+        <div class="language-selector">
+          <label for="language">Ngôn ngữ:</label>
+          <select id="language">
+            <option value="vi">Tiếng Việt</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <a href="#" class="newsletter-link">Đăng ký nhận tin tức</a>
+      </div>
+    </footer>
+
+    <script>
+      // Slideshow functionality
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+      const dotsContainer = document.querySelector(".dots-container");
+
+      // Create navigation dots
+      slides.forEach((_, index) => {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        dot.onclick = () => goToSlide(index);
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = document.querySelectorAll(".dot");
+
+      function changeSlide(direction) {
+        slides[currentSlide].style.display = "none";
+        dots[currentSlide].classList.remove("active");
+        currentSlide =
+          (currentSlide + direction + slides.length) % slides.length;
+        slides[currentSlide].style.display = "block";
+        dots[currentSlide].classList.add("active");
+      }
+
+      function goToSlide(index) {
+        slides[currentSlide].style.display = "none";
+        dots[currentSlide].classList.remove("active");
+        currentSlide = index;
+        slides[currentSlide].style.display = "block";
+        dots[currentSlide].classList.add("active");
+      }
+
+      // Initialize slideshow
+      slides.forEach(
+        (slide, index) => (slide.style.display = index === 0 ? "block" : "none")
+      );
+      dots[currentSlide].classList.add("active");
+
+      // Automatic slideshow
+      setInterval(() => changeSlide(1), 5000); // Change slide every 5 seconds
+    </script>
+  </body>
+</html>
