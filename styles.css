@@ -339,7 +339,9 @@ footer {
   justify-content: flex-end; /* Align buttons to the right */
   align-items: center; /* Ensure vertical alignment */
   margin-right: 15px; /* Add some margin to the right */
-  gap: 20px; /* Add spacing between buttons */
+  gap: 150px; /* Increased spacing between user actions */
+  font-size: 16px; /* Increased font size for better visibility */
+  font-weight: bold; /* Make the text bold */
 }
 
 .main-content {
@@ -352,7 +354,7 @@ footer {
   gap: 0px;
   margin-bottom: 20px;
   grid-template-columns: repeat(5, 1fr);
-  row-gap: 150px; /* Space between rows */
+  row-gap: 220px; /* Space between rows */
 }
 
 .product-item {
@@ -379,23 +381,6 @@ footer {
 .product-info p {
   font-size: 16px;
   color: #666;
-}
-
-.articles-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-article {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  font-size: 16px;
-  color: #333;
-}
-
-article:last-child {
-  border-bottom: none; /* Remove border for the last article */
 }
 
 /* Footer Styles */
@@ -446,4 +431,135 @@ footer {
   color: white;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Q&A Section */
+.qa-section {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.qa-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.qa-container {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.qa-header p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.qa-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.qa-input textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+.qa-input button {
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.qa-input button:hover {
+  background-color: #b71c1c;
+}
+
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.qa-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.qa-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qa-user-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #d32f2f;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+}
+
+.qa-user-name {
+  font-weight: bold;
+}
+
+.qa-content {
+  font-size: 14px;
+  color: #333;
+}
+
+.qa-reply {
+  align-self: flex-end;
+  padding: 5px 10px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.qa-reply:hover {
+  background-color: #b71c1c;
+}
+
+/* Notification Subscribe */
+.notification-subscribe {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.subscribe-button {
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: darkorange;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -4,23 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f4f4f4;
-      }
       .login-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background: #fff;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         width: 320px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       .login-container h2 {
         margin-bottom: 20px;
@@ -79,6 +79,28 @@
     </style>
   </head>
   <body>
+    <header>
+      <div class="header-top" style="color: black">
+        <div class="header-top-item">Liên hệ: 0111-XXXX</div>
+        <div class="header-top-item">Chuyển phát nhanh</div>
+        <div class="header-top-item">Chính hãng - Chất lượng</div>
+      </div>
+      <div class="header-main">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Bạn cần gì?" />
+        </div>
+        <div class="user-actions">
+          <a href="tracuu.html" class="link">Tra cứu</a>
+          <a href="giohang.html" class="link">Giỏ hàng</a>
+          <a href="login.html" class="link">Guest</a>
+        </div>
+      </div>
+    </header>
     <div class="login-container">
       <h2>Login</h2>
       <form action="https://XTechHub.me/login" method="POST">

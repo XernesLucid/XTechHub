@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+      .container {
+        text-align: center;
+      }
+      button {
+        background: linear-gradient(
+          to right,
+          #ff7e5f,
+          #feb47b
+        ); /* Gradient similar to header */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-top" style="color: black">
+          <div class="header-top-item">Liên hệ: 0111-XXXX</div>
+          <div class="header-top-item">Chuyển phát nhanh</div>
+          <div class="header-top-item">Chính hãng - Chất lượng</div>
+        </div>
+        <div class="header-main">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="Bạn cần gì?" />
+          </div>
+          <div class="user-actions">
+            <a href="tracuu.html" class="link">Tra cứu</a>
+            <a href="giohang.html" class="link">Giỏ hàng</a>
+            <a href="login.html" class="link">Đăng nhập</a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <img
+          src="img/pngtree-empty-box-icon-for-your-project-png-image_1521417.jpg"
+          alt="Placeholder Image"
+        />
+        <b><p>Chưa có gì ở đây cả....</p></b>
+      </main>
+      <p>Hãy thêm sản phẩm vào giỏ hàng của bạn!</p>
+      <button onclick="location.href='index.html'">Trở lại mua sắm nào</button>
+    </div>
+  </body>
+</html>
